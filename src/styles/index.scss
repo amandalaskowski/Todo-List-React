@@ -1,13 +1,55 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
 
-*/
+
+ul{
+    list-style-type: none;
+    background-color: white;
+    width: 40%;
+    margin: auto; 
+    font-family: 'Lato', sans-serif;
+}
+
+button{
+    border: none;
+    display: none;
+    background-color: white;
+    justify-content: right;
+    color: blue;
+}
+
+body{
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+     background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.item{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    font-size: x-large;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+input{
+    width: 40%;
+    height: 75px;
+    font-size: x-large;
+    font-family: 'Lato', sans-serif;
+}
+
+.buttonAppear:hover button {
+    border: none;
+    display: block;
+   
+}
+
+h1{
+    font-family: 'Lato', sans-serif;
+    font-size: 100px;
+}
