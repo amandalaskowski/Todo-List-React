@@ -24,6 +24,10 @@ export function TodoList() {
 		setTodolist(newArr);
 	};
 
+	React.useEffect(() => {
+		console.log("The task: ", userInput, "was added");
+	}, [userInput]);
+
 	return (
 		<div className="body">
 			<h1>todos</h1>
