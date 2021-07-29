@@ -49,7 +49,7 @@ export function TodoList() {
 							</div>
 						);
 					})}
-					<li className="itemsLeft">items left</li>
+					<li className="itemsLeft">{todolist.length} items left</li>
 				</ul>
 			</div>
 		</div>
