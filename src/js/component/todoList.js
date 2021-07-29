@@ -43,7 +43,7 @@ export function TodoList() {
 				<ul>
 					{todolist.map((task, i) => {
 						return (
-							<div className="buttonAppear">
+							<div className="buttonAppear" key={i}>
 								<li className="item" key={i}>
 									{task}{" "}
 									<button value={i} onClick={deleteTodo}>
