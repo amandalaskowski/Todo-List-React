@@ -2,11 +2,7 @@ import React, { useState } from "react";
 
 export function TodoList() {
 	let [userInput, setUserInput] = useState("");
-	let [todolist, setTodolist] = useState([
-		"Wash hands",
-		"Make your bed",
-		"Practice piano"
-	]);
+	let [todolist, setTodolist] = useState([]);
 
 	const handleKeyPress = event => {
 		if (event.key === "Enter") {
@@ -25,8 +21,21 @@ export function TodoList() {
 	};
 
 	React.useEffect(() => {
-		console.log("The task: ", userInput, "was added");
-	}, [userInput]);
+		const getList = fetch(
+			"https://assets.breatheco.de/apis/fake/todos/user/amandalaskowski",
+			{
+				method: "GET"
+			}
+		);
+		getList
+			.then(resp => {
+				return resp.json();
+			})
+			.then(data => {
+				const newTodos = data.map(x => x.label);
+				setTodolist(newTodos);
+			});
+	});
 
 	return (
 		<div className="body">
